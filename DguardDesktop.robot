@@ -15,7 +15,8 @@ Force Tags      Windows
 
 *** Variables ***
 ${REMOTE_URL}   http://127.0.0.1:4723
-${APP}          Calculadora Microsoft.WindowsCalculator_8wekyb3d8bbwe!App
+#${APP}          Microsoft.WindowsCalculator_8wekyb3d8bbwe!App
+${APP}          {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\notepad.exe
 
 *** Keywords ***
 Start Calculadora 
@@ -28,8 +29,9 @@ Start Calculadora
 
 
 *** Test Cases ***
-Esperar E Clicar No Botão Configurações
-  wait For And Click Element    accessibility_id=num2Button
-  wait Until Element Contains   accessibility_id=CalculatorResults  2
+Esperar E Clicar No Botão Dois
+   #Wait For And Click Element    accessibility_id=num2Button
+   #Wait Until
+  
   
  
